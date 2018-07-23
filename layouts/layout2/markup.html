@@ -11,25 +11,7 @@
 								duration: 6000,
 								prevButton: $('#nt-example2-prev'),
 								nextButton: $('#nt-example2-next'),
-								hasMoved: function() {
-										$('#nt-example2-infos-container').fadeOut(200, function(){
-												$('#nt-example2-infos .infos-hour').text($('#nt-example2 li:first span').text());
-												$('#nt-example2-infos .infos-text').text($('#nt-example2 li:first').data('infos'));
-												$(this).fadeIn(400);
-											});
-									},
-									pause: function() {
-										$('#nt-example2 li i').removeClass('fa-play').addClass('fa-pause');
-									},
-									unpause: function() {
-										$('#nt-example2 li i').removeClass('fa-pause').addClass('fa-play');
-									}
-							});
-							$('#nt-example2-infos').hover(function() {
-									nt_example2.newsTicker('pause');
-							}, function() {
-									nt_example2.newsTicker('unpause');
-							});
+						
 							
 					</code>
 				</pre>

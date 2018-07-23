@@ -44,7 +44,7 @@
     color: white;
     padding: 10px 16px 10px 16px;
 }
-#fnf-newsTicker-infos .infos-hour {
+#fnf-newsTicker-infos .fnf-newsTicker-infos-hour {
 	font-size: 50px;
 	font-weight: 700;
 	margin-top: 20px;
