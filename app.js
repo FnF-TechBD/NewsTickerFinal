@@ -115,6 +115,7 @@ window.onload = function (e) {
      * Get the user set layout
      */
     let layout = getLayout();
+    console.log(layout);
     let layoutUrl = basePath+'layouts/' + layout + '/markup.html' ;
 
 
@@ -127,10 +128,12 @@ window.onload = function (e) {
       fileRequest.open("GET", layoutUrl, true);
       fileRequest.send();
 
+
+
 }
 
 function getLayout(){
-    return 'default';
+    return 'layout2';
 }
 
 
