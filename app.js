@@ -39,7 +39,8 @@ window.onload = function (e) {
 
     let layout2Script = document.createElement('script');
     let layout2Css = document.createElement('link');
-
+    let assetsScript = document.createElement('script');
+    let assetsCss = document.createElement('link');
 
     /**
      * Jquery CDN
@@ -87,7 +88,9 @@ window.onload = function (e) {
      * Layout2 layout elements
      */
     layout2Script.src = basePath + 'layouts/layout2/script.js';
+    assetsScript.src = basePath + 'layouts/assets/prism.js';
     layout2Css.href = basePath + 'layouts/layout2/style.css';
+    assetsCss.href = basePath + 'layouts/assets/prism.css';
     layout2Css.rel = 'stylesheet';
 
 

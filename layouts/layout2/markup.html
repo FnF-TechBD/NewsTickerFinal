@@ -1,14 +1,66 @@
 <div id="fnfLayout2Layout">
-  	<div class="row">
-  		<div class="col-6">
-  			Hello 
-  		</div>
-  		<div class="col-6">
-  			<div class="layout2-right-div">
-  				<ul class="layout2-right-div-ul">
-  				  <li class=""> Lorem ipsum dolor sit amet, vocibus salutandi repudiandae eam in, usu nullam propriae inimicus at. Ut illum inermis qui, iudico aliquando suscipiantur cum ad. Mei euismod minimum id,</li>
-  				</ul>
-  			</div>
-  		</div>
-  	</div>
+	<div class="row">
+		<div class="col-6">
+			<div class="fnf-newsTicker-layout2-left-div">
+				<pre class="language-css" style="background:gray;">
+					<code class="language-css">
+							var nt_example2 = $('#nt-example2').newsTicker({
+								row_height: 60,
+								max_rows: 1,
+								speed: 300,
+								duration: 6000,
+								prevButton: $('#nt-example2-prev'),
+								nextButton: $('#nt-example2-next'),
+								hasMoved: function() {
+										$('#nt-example2-infos-container').fadeOut(200, function(){
+												$('#nt-example2-infos .infos-hour').text($('#nt-example2 li:first span').text());
+												$('#nt-example2-infos .infos-text').text($('#nt-example2 li:first').data('infos'));
+												$(this).fadeIn(400);
+											});
+									},
+									pause: function() {
+										$('#nt-example2 li i').removeClass('fa-play').addClass('fa-pause');
+									},
+									unpause: function() {
+										$('#nt-example2 li i').removeClass('fa-pause').addClass('fa-play');
+									}
+							});
+							$('#nt-example2-infos').hover(function() {
+									nt_example2.newsTicker('pause');
+							}, function() {
+									nt_example2.newsTicker('unpause');
+							});
+							
+					</code>
+				</pre>
+		</div>
+		</div>
+		<div class="col-6">
+			<div class="fnf-newsTicker-wrapper-right-side">
+					<div class="fnf-newsTicker-layout2-right-div">
+							<ul class="fnf-newsTicker-layout2-right-div-ul">
+								<li class=""> Lorem ipsum dolor sit amet, vocibus salutandi repudiandae eam in, usu nullam propriae inimicus at. Ut illum inermis
+									qui, iudico aliquando suscipiantur cum ad. Mei euismod minimum id,</li>
+							</ul>
+						</div>
+						<div id="fnf-newsTicker-layout2-right-div">
+								<div id="fnf-newsTicker-infos-container">
+											<div id="fnf-newsTicker-infos-triangle"></div>
+											<div id="fnf-newsTicker-infos" class="row">
+												<div class="col-4 centered">
+													<div class="fnf-newsTicker-infos-hour">
+														08:12
+													</div>
+													<i class="fa fa-arrow-left" id="fnf-newsTicker-prev"></i>
+													<i class="fa fa-arrow-right" id="fnf-newsTicker-next"></i>
+												</div>
+												<div class="col-8">
+													<div class="fnf-newsTicker-infos-text">Cras sagittis nulla sit amet feugiat pulvinar. Fusce scelerisque aliquet purus, sit amet rutrum augue euismod ut. Aliquam erat volutpat. Integer convallis, ligula non bibendum dictum, ante lectus fringilla nunc, at euismod neque enim sit amet ante. In risus velit, porttitor blandit magna vel, adipiscing semper libero.</div>
+												</div>
+											</div>
+								</div>
+							</div>
+			</div>
+		</div>
+	</div>
 </div>
